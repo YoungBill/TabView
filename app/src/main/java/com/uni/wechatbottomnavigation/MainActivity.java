@@ -6,14 +6,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
+import com.pin.tabview.TabView;
 import com.uni.wechatbottomnavigation.fragment.ChatFragment;
 import com.uni.wechatbottomnavigation.fragment.ContactFragment;
 import com.uni.wechatbottomnavigation.fragment.FindFragment;
 import com.uni.wechatbottomnavigation.fragment.ProfileFragment;
-import com.uni.wechatbottomnavigation.view.TabView;
 
 import java.util.ArrayList;
 import java.util.List;

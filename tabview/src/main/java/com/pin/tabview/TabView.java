@@ -1,19 +1,17 @@
-package com.uni.wechatbottomnavigation.view;
+package com.pin.tabview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Looper;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.uni.wechatbottomnavigation.R;
-
 
 public class TabView extends FrameLayout {
+
     private ImageView mNormalImageView;
     private ImageView mSelectedImageView;
     private TextView mTitleView;
@@ -29,7 +27,7 @@ public class TabView extends FrameLayout {
     // 标题和轮廓图最终的着色
     private static final int DEFAULT_TAB_TARGET_COLOR = 0x11E53;
 
-    public TabView(Context context, @Nullable AttributeSet attrs) {
+    public TabView(Context context, AttributeSet attrs) {
         super(context, attrs);
         // 加载布局
         inflate(context, R.layout.tab_layout, this);
@@ -37,27 +35,14 @@ public class TabView extends FrameLayout {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TabView);
         for (int i = 0; i < a.getIndexCount(); i++) {
             int attr = a.getIndex(i);
-            switch (attr) {
-
-                case R.styleable.TabView_tabColor:
-                    // 获取标题和轮廓最终的着色
-                    mTargetColor = a.getColor(attr, DEFAULT_TAB_TARGET_COLOR);
-                    break;
-
-                case R.styleable.TabView_tabImage:
-                    // 获取轮廓图
-                    mNormalDrawable = a.getDrawable(attr);
-                    break;
-
-                case R.styleable.TabView_tabSelectedImage:
-                    // 获取选中图
-                    mSelectedDrawable = a.getDrawable(attr);
-                    break;
-
-                case R.styleable.TabView_tabTitle:
-                    // 获取标题
-                    mTitle = a.getString(attr);
-                    break;
+            if (attr == R.styleable.TabView_tabColor) {// 获取标题和轮廓最终的着色
+                mTargetColor = a.getColor(attr, DEFAULT_TAB_TARGET_COLOR);
+            } else if (attr == R.styleable.TabView_tabImage) {// 获取轮廓图
+                mNormalDrawable = a.getDrawable(attr);
+            } else if (attr == R.styleable.TabView_tabSelectedImage) {// 获取选中图
+                mSelectedDrawable = a.getDrawable(attr);
+            } else if (attr == R.styleable.TabView_tabTitle) {// 获取标题
+                mTitle = a.getString(attr);
             }
 
         }
@@ -138,21 +123,21 @@ public class TabView extends FrameLayout {
      *
      * @param percentage 进度值，范围[0, 1]。
      * @param startValue 起始颜色值。
-     * @param endValue 最终颜色值。
+     * @param endValue   最终颜色值。
      * @return 返回与进度值相应的颜色值。
      */
     private int evaluate(float percentage, int startValue, int endValue) {
         int startInt = startValue;
         float startA = ((startInt >> 24) & 0xff) / 255.0f;
         float startR = ((startInt >> 16) & 0xff) / 255.0f;
-        float startG = ((startInt >>  8) & 0xff) / 255.0f;
-        float startB = ( startInt        & 0xff) / 255.0f;
+        float startG = ((startInt >> 8) & 0xff) / 255.0f;
+        float startB = (startInt & 0xff) / 255.0f;
 
         int endInt = endValue;
         float endA = ((endInt >> 24) & 0xff) / 255.0f;
         float endR = ((endInt >> 16) & 0xff) / 255.0f;
-        float endG = ((endInt >>  8) & 0xff) / 255.0f;
-        float endB = ( endInt        & 0xff) / 255.0f;
+        float endG = ((endInt >> 8) & 0xff) / 255.0f;
+        float endB = (endInt & 0xff) / 255.0f;
 
         // convert from sRGB to linear
         startR = (float) Math.pow(startR, 2.2);

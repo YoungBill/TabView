@@ -12,51 +12,51 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:padding="8dp"
-        android:background="#ffeeeeee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:background="#ffeeeeee"
+        android:padding="8dp">
 
-        <com.uni.wechatbottomnavigation.view.TabView
+        <com.pin.tabview.TabView
             android:id="@+id/tab_weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            bxll:tabColor="#FF11E53F"
             bxll:tabImage="@mipmap/weixin_normal"
             bxll:tabSelectedImage="@mipmap/weixin_pressed"
-            bxll:tabColor="#FF11E53F"
-            bxll:tabTitle="微信"
+            bxll:tabTitle="微信" />
+
+        <com.pin.tabview.TabView
+            android:id="@+id/tab_contact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <com.uni.wechatbottomnavigation.view.TabView
-            android:id="@+id/tab_contact"
+            android:layout_weight="1"
+            bxll:tabColor="#FF11E53F"
             bxll:tabImage="@mipmap/contact_list_normal"
             bxll:tabSelectedImage="@mipmap/contact_list_pressed"
-            bxll:tabColor="#FF11E53F"
-            bxll:tabTitle="联系人"
+            bxll:tabTitle="联系人" />
+
+        <com.pin.tabview.TabView
+            android:id="@+id/tab_find"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <com.uni.wechatbottomnavigation.view.TabView
-            android:id="@+id/tab_find"
+            android:layout_weight="1"
+            bxll:tabColor="#FF11E53F"
             bxll:tabImage="@mipmap/find_normal"
             bxll:tabSelectedImage="@mipmap/find_pressed"
-            bxll:tabColor="#FF11E53F"
-            bxll:tabTitle="发现"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            bxll:tabTitle="发现" />
 
-        <com.uni.wechatbottomnavigation.view.TabView
+        <com.pin.tabview.TabView
             android:id="@+id/tab_profile"
-            bxll:tabImage="@mipmap/profile_normal"
-            bxll:tabColor="#FF11E53F"
-            bxll:tabSelectedImage="@mipmap/profile_pressed"
-            bxll:tabTitle="我"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            bxll:tabColor="#FF11E53F"
+            bxll:tabImage="@mipmap/profile_normal"
+            bxll:tabSelectedImage="@mipmap/profile_pressed"
+            bxll:tabTitle="我" />
 
     </LinearLayout>
 
