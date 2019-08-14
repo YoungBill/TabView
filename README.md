@@ -2,13 +2,13 @@
 高仿微信底部导航栏动画，几乎一毛一样。
 
 # 动画演示
-![动画演示](https://github.com/buxiliulian/WeChatBottomNavigation/blob/master/gif/weixin.gif)
+![动画演示](https://github.com/YoungBill/TabView/blob/master/gif/weixin.gif)
 
 # 如何使用
 
 ## 布局添加TabView
 ```xml
-        <com.uni.wechatbottomnavigation.view.TabView
+        <com.pin.tabview.TabView
             android:id="@+id/tab_profile"
             bxll:tabImage="@mipmap/profile_normal"
             bxll:tabColor="#FF11E53F"
@@ -45,6 +45,6 @@
 `ViewPager`监听滑动事件，向`TabView`传入一个进度值，从而控制`TabView`的动画
 
 # 联系我
-1. blog: https://my.csdn.net/zwlove5280
-2. QQ Email: 509643792@qq.com
-3. Gmail: zwlove5250@gmail.com
+1. blog: https://www.jianshu.com/u/6acf9fe9bf19
+2. QQ Email: 935612713@qq.com
+3. Gmail: bainataochen@gmail.com
