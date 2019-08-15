@@ -1,7 +1,7 @@
 *.iml
 local.properties
 build/
-.idea/
+.idea/*
 .gradle/
 tatus
 *.apk
