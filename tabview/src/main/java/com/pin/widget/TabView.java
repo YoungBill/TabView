@@ -1,4 +1,4 @@
-package com.pin.tabview;
+package com.pin.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.pin.tabview.R;
 
 
 public class TabView extends FrameLayout {
