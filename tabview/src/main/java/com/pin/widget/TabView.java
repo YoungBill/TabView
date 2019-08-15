@@ -9,9 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pin.tabview.R;
-
-
 public class TabView extends FrameLayout {
 
     private ImageView mNormalImageView;

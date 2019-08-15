@@ -8,7 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.pin.tabview.TabView;
+import com.pin.widget.TabView;
 import com.uni.wechatbottomnavigation.fragment.ChatFragment;
 import com.uni.wechatbottomnavigation.fragment.ContactFragment;
 import com.uni.wechatbottomnavigation.fragment.FindFragment;

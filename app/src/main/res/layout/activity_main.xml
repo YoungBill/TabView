@@ -18,7 +18,7 @@
         android:background="#ffeeeeee"
         android:padding="8dp">
 
-        <com.pin.tabview.TabView
+        <com.pin.widget.TabView
             android:id="@+id/tab_weixin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
             bxll:tabSelectedImage="@mipmap/weixin_pressed"
             bxll:tabTitle="微信" />
 
-        <com.pin.tabview.TabView
+        <com.pin.widget.TabView
             android:id="@+id/tab_contact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             bxll:tabSelectedImage="@mipmap/contact_list_pressed"
             bxll:tabTitle="联系人" />
 
-        <com.pin.tabview.TabView
+        <com.pin.widget.TabView
             android:id="@+id/tab_find"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             bxll:tabSelectedImage="@mipmap/find_pressed"
             bxll:tabTitle="发现" />
 
-        <com.pin.tabview.TabView
+        <com.pin.widget.TabView
             android:id="@+id/tab_profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
