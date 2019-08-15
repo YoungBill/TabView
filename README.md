@@ -9,7 +9,7 @@
 ## Add dependency to your project(jcenter):
 
 ```gradle
-implementation 'com.pin.widget:tabview:1.0.1'
+implementation 'com.pin.widget:tabview:1.1.0'
 ```
 
 ## 布局添加TabView
