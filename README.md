@@ -6,6 +6,12 @@
 
 # 如何使用
 
+## Add dependency to your project(jcenter):
+
+```gradle
+implementation 'com.pin.widget:tabview:1.0.1'
+```
+
 ## 布局添加TabView
 ```xml
         <com.pin.tabview.TabView
